@@ -1,7 +1,7 @@
 {
   "name": "webcity",
   "version": "0.1.0",
-  "homepage": "https://ethm370.github.io/react-gh-pages",
+  "homepage": "https://ethm370.github.io/webcity",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -48,3 +48,4 @@
     "gh-pages": "^6.3.0"
   }
 }
+
