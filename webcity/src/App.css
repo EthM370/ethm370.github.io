@@ -1,9 +1,9 @@
 body {
-  background-color: #1e1e1e;
-  font-family: 'Courier New', monospace; /* Change as needed */
-  color: #dcdcdc; /* Default text color */
   margin: 0; /* Remove default margin */
   line-height: 1.5; /* Improve legibility */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -21,7 +21,7 @@ body {
 
 .App-header {
   background-color: #001353;
-  min-height: 15vmin;
+  min-height: 10vmin;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,12 +30,14 @@ body {
   color: white;
 }
 
+
 .linkButton {
   padding: 10px 20px;
   border-radius: 5px;
   background-color: #61dafb;
   transition: background-color 0.3s;
   color: white;
+  font-size: 30px;
 }
 
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './image.png';
-import { MantineProvider, Box, Button, Title, SimpleGrid} from '@mantine/core';
-import Navbar from "./Navbar"
+import { MantineProvider, Group, Burger, Skeleton, Button, Title, SimpleGrid, Flex, AppShell, Container, Center} from '@mantine/core';
 import './App.css';
 import { redirect } from 'react-router-dom';
 
@@ -10,33 +9,40 @@ function App() {
     window.location.href = url;
   } 
     
-  return (
+    return (
     <MantineProvider>
-      <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-      </header>
-
-      <Box style={{margin: "16px", maw:"500px", alignContent:'center'}}>
+      <AppShell
+        header={{ height: '10px'}}
+        navbar={{
+          width: 300,
+          breakpoint: 'sm',
+        }}
+        padding="md"
+      >
+      <AppShell.Header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <Title order={1}>Hi, my name is Ethan and this is my website!</Title>
-        <Title order={2}>I'm currently pursuing a computer science degree at UIUC </Title>
-          
-        <SimpleGrid cols={1}>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-        </SimpleGrid>
-        <Button className="linkButton" onClick={() => {handleButtonRedirect("https://github.com/EthM370")}}>
-          GitHub Link
-          </Button>    
-        <Button className="linkButton" onClick={() => {handleButtonRedirect("https://www.linkedin.com/in/ethan-ma-8207a6327")}}>
-          Linkedin Link
-        </Button>      
-      </Box>
+      </AppShell.Header>
+        <AppShell.Main>
+          <Center maw='500px' color='var(--mantine-color-blue-light)' mx="auto" 
+            style={{ display: 'flex', justifyContent: 'center', alignItems:'center', flex:"column"}}
+          >
+            <Title order={2}>I'm currently pursuing a computer science degree at UIUC </Title>
+          </Center>   
+          <Center maw='500px' color='var(--mantine-color-blue-light)' mx="auto" 
+            style={{ display: 'flex', justifyContent: 'center', alignItems:'center', flex:"column"}}
+          >
+            <Button className="linkButton" onClick={() => {handleButtonRedirect("https://github.com/EthM370")}}>
+              GitHub Link
+            </Button>    
+            <Button className="linkButton" onClick={() => {handleButtonRedirect("https://www.linkedin.com/in/ethan-ma-8207a6327")}}>
+              Linkedin Link
+            </Button>
+          </Center>
+        </AppShell.Main>
+      </AppShell>
     </MantineProvider>
-  );
+    );
 }
 
 export default App;
