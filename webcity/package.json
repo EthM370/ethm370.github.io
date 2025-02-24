@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://ethm370.github.io/",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@mantine/core": "^7.17.0",
     "@mantine/hooks": "^7.17.0",

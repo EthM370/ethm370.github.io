@@ -2,14 +2,14 @@ import React from 'react';
 import logo from './image.png';
 import { MantineProvider, Group, Burger, Skeleton, Button, Title, SimpleGrid, Flex, AppShell, Container, Center} from '@mantine/core';
 import './App.css';
-import { redirect } from 'react-router-dom';
+
 
 function App() {
   const handleButtonRedirect = (url : string) => {
     window.location.href = url;
   } 
     
-    return (
+  return (
     <MantineProvider>
       <AppShell
         header={{ height: '10px'}}
@@ -27,8 +27,13 @@ function App() {
           <Center maw='500px' color='var(--mantine-color-blue-light)' mx="auto" 
             style={{ display: 'flex', justifyContent: 'center', alignItems:'center', flex:"column"}}
           >
-            <Title order={2}>I'm currently pursuing a computer science degree at UIUC </Title>
-          </Center>   
+            <Title order={2}>I'm currently pursuing a Computer Science degree at UIUC </Title>   
+          </Center>  
+          <Center maw='500px' color='var(--mantine-color-blue-light)' mx="auto" 
+            style={{ display: 'flex', justifyContent: 'center', alignItems:'center', flex:"column"}}
+          >
+            <Title order={4}> Contact me at: ethanma4@illinois.edu / 630-888-8209 </Title>
+          </Center>
           <Center maw='500px' color='var(--mantine-color-blue-light)' mx="auto" 
             style={{ display: 'flex', justifyContent: 'center', alignItems:'center', flex:"column"}}
           >
