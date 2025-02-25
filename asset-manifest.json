@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.76e61aa1.css",
-    "main.js": "/static/js/main.96120989.js",
-    "static/js/453.4525bc56.chunk.js": "/static/js/453.4525bc56.chunk.js",
-    "static/media/Lumatic_HeadshotEdit.png": "/static/media/Lumatic_HeadshotEdit.b07261ad7bb09a8dac63.png",
-    "index.html": "/index.html",
-    "main.76e61aa1.css.map": "/static/css/main.76e61aa1.css.map",
-    "main.96120989.js.map": "/static/js/main.96120989.js.map",
-    "453.4525bc56.chunk.js.map": "/static/js/453.4525bc56.chunk.js.map"
+    "main.css": "/:passkey/static/css/main.76e61aa1.css",
+    "main.js": "/:passkey/static/js/main.d179602d.js",
+    "static/js/453.4525bc56.chunk.js": "/:passkey/static/js/453.4525bc56.chunk.js",
+    "static/media/Lumatic_HeadshotEdit.png": "/:passkey/static/media/Lumatic_HeadshotEdit.b07261ad7bb09a8dac63.png",
+    "index.html": "/:passkey/index.html",
+    "main.76e61aa1.css.map": "/:passkey/static/css/main.76e61aa1.css.map",
+    "main.d179602d.js.map": "/:passkey/static/js/main.d179602d.js.map",
+    "453.4525bc56.chunk.js.map": "/:passkey/static/js/453.4525bc56.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76e61aa1.css",
-    "static/js/main.96120989.js"
+    "static/js/main.d179602d.js"
   ]
 }
