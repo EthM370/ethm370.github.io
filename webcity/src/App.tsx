@@ -1,9 +1,11 @@
 import React from 'react';
-import logo from './image.png';
-import { MantineProvider, Tabs, List, Center, Button, Title, Flex, AppShell, Container} from '@mantine/core';
+import { Card, MantineProvider, Tabs, List, Center, Button, Title, Image, AppShell, Container, Group, Text, Stack} from '@mantine/core';
 import '@mantine/core/styles.css'
 import './App.css'
-import { ListFormat } from 'typescript';
+import headshot from './assets/Lumatic_HeadshotEdit.png'
+import logo from './assets/MyGitHubProfile.png'
+import linkedlogo from './assets/LinkedInLogo.png'
+
 
 
 function App() {
@@ -16,21 +18,57 @@ function App() {
       <AppShell
         header={{ height: '100px' }}
         padding="md"
+        footer={{ height: '25px' }}
       >
-      <AppShell.Header className="App-header">
-        
-        <Title order={1} left={logo}>Hi, my name is Ethan and this is my website!</Title>
+      <AppShell.Header className="App-header">      
+        <Title order={1}>Hi, my name is Ethan and this is my website!</Title>
       </AppShell.Header>
         <AppShell.Main>
-            <Center> 
-              <Title order={2}>I'm currently pursuing a Computer Science degree at UIUC</Title> 
-              Contact me at: ethanma4@illinois.edu / 630-888-8209
-            </Center>
-            
+            <Group justify="center">
+              <Image h={400}
+                w="auto"
+                fit="contain" 
+                src={headshot}/>
+              <Center> 
+                <Container w="550px" flex="auto" style={{ padding:'20px', borderRadius:"10px", backgroundColor: '#C0C0C0'}}>
+                  <Stack>
+                    <Title order={1}>Hi, I'm Ethan</Title> 
+                    <Text> I'm currently pursuing a Computer Science BS at UIUC</Text>
+                    <Text> I like skiing, video games, and F1</Text>
+                    <Text> Contact me at... </Text>
+                    <Text> Email: ethanma4@illinois.edu </Text>
+                    <Text> </Text>
+                  </Stack>
+                </Container>
+              </Center>   
+            </Group>
+            <Group justify='center'>
+              <Card shadow="sm" padding="lg" radius="md" withBorder>
+                <Card.Section flex="auto">
+                  <Center>
+                  <Image flex="auto" h='160px' w="auto" src={logo}/>
+                  </Center>
+                </Card.Section>
+                <Group justify="space-between" mt="md" mb="xs">
+                  <Text fw={500}>GitHub Account</Text>
+                </Group>
+                <Button variant="outline" onClick={() => {handleButtonRedirect("https://github.com/EthM370")}}>
+                    GitHub Link
+                </Button>   
+              </Card>
+              <Card shadow="sm" padding="lg" radius="md" withBorder>
+                <Group justify="space-between" mt="md" mb="xs">
+                  <Text fw={500}>LinkedIn Account</Text>
+                </Group>
+                <Button variant="outline" onClick={() => {handleButtonRedirect("https://www.linkedin.com/in/ethan-ma-8207a6327")}}>
+                Linkedin Link
+              </Button>
+              </Card>
+            </Group>
             <Container style={{ height: '500px', alignItems: 'center', justifyContent: 'center', padding:"10px" }} >
             <Title order={3}>Resume:</Title>
-            <Tabs defaultValue="education" variant="outline">
-              <Tabs.List>
+            <Tabs color="teal" defaultValue="education">
+              <Tabs.List justify="space-between">
                 <Tabs.Tab value="education">
                   Education
                 </Tabs.Tab>
@@ -102,13 +140,13 @@ function App() {
               </Tabs.Panel>
             </Tabs>
             </Container>
-            <Button variant="outline" onClick={() => {handleButtonRedirect("https://github.com/EthM370")}}>
-              GitHub Link
-            </Button>    
-            <Button variant="outline" onClick={() => {handleButtonRedirect("https://www.linkedin.com/in/ethan-ma-8207a6327")}}>
-              Linkedin Link
-            </Button>
+            
         </AppShell.Main>
+        <AppShell.Footer >
+            <Center color='black'>
+              Made with ReactApp | Hosted through Github Pages
+            </Center>
+        </AppShell.Footer>
       </AppShell>
     </MantineProvider>
     );
