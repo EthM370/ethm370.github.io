@@ -1,22 +1,17 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HashRouter as Routers, Routes, Route } from 'react-router-dom'; 
 import Home from './home'
 import Blank from './blank'
 
-export const Router: React.FC = () => {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Blank />
-    },
-    {
-      path: '/:passkey',
-      element: <Home />,
-    }
-  ])
-
+export const RouterR: React.FC = () => {
   return (
-    <RouterProvider router={router} />
+    <Routers>
+      <Routes>
+        <Route path="/" element={<Blank />}/>
+        <Route path="/:passkey" element={<Home />}/>
+      </Routes>
+    </Routers>
   );
 }
 
