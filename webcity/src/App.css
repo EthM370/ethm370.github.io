@@ -1,10 +1,3 @@
-body {
-  margin: 0; /* Remove default margin */
-  line-height: 1.5; /* Improve legibility */
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
 .App-logo {
   height: 10vmin;
@@ -19,14 +12,6 @@ body {
   }
 }
 
-.App-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 
 .App-header {
@@ -40,15 +25,6 @@ body {
   color: white;
 }
 
-
-.linkButton {
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #61dafb;
-  transition: background-color 0.3s;
-  color: white;
-  font-size: 30px;
-}
 
 
 @keyframes App-logo-spin {
