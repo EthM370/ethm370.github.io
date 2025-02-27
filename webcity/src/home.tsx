@@ -9,12 +9,12 @@ import { useParams } from 'react-router-dom';
 
 
 const Home: React.FC = () => {
-  const correctpasskey = "bcda098c-0869-4d28-b094-1e408cddffb3";
+  const PASSKEY = process.env.REACT_APP_PASSKEY;
   const { passkey } = useParams<{passkey: string}>();
   const handleButtonRedirect = (url : string) => {
     window.location.href = url;
   }
-  if (passkey !== correctpasskey) {
+  if (passkey !== PASSKEY) {
     window.location.href = '/'
   } 
   
@@ -99,17 +99,17 @@ const Home: React.FC = () => {
               <Tabs.Panel value="skill">
               TECHNICAL SKILLS  
                 <List>
-                  <List.Item>- Programming Language: Python, Java, TypeScript, SQL, Mathematica, C#</List.Item>
-                  <List.Item>- OS: Mac & Windows 11</List.Item>
-                  <List.Item>- Frameworks/Tools: Ollama, Git, Anaconda, VS Code, Gradio, Docker, Notebook LLM, HuggingFace, AWS SDK </List.Item>
-                  <List.Item>- Libraries: PyTorch, Openssl, Numpy, Sqlite3, OpenAI </List.Item>
-                  <List.Item>- Spoken Languages: Bilingual (English, Mandarin)</List.Item>
+                  <List.Item>Programming Language: Python, Java, TypeScript, SQL, Mathematica, C#</List.Item>
+                  <List.Item>OS: Mac & Windows 11</List.Item>
+                  <List.Item>Frameworks/Tools: Ollama, Git, Anaconda, VS Code, Gradio, Docker, Notebook LLM, HuggingFace, AWS SDK </List.Item>
+                  <List.Item>Libraries: PyTorch, Openssl, Numpy, Sqlite3, OpenAI </List.Item>
+                  <List.Item>Spoken Languages: Bilingual (English, Mandarin)</List.Item>
                 </List>
               </Tabs.Panel>
               <Tabs.Panel value="experience">
               EXPERIENCES
                 <List>
-                  <List.Item>ACM Infra Committee Member 10/2024 -
+                  <List.Item>ACM Infra Committee Member 10/2024 - 
                     - Selected member of ACM Infrastructure committee focused on core-api development.
                     - Currently developing an unified ticketing and management system for ACM events, utilizing AWS lambda and dynamoDB</List.Item>
                   <List.Item>  SIAM MathWorks Math Modeling Challenge 03/2024
