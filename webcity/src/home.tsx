@@ -11,11 +11,11 @@ import { useParams } from 'react-router-dom';
 const Home: React.FC = () => {
   const URL = process.env.REACT_APP_URL;
 
-  const { url } = useParams<{url: string}>();
+  const { key } = useParams<{key: string}>();
   const handleButtonRedirect = (url : string) => {
     window.location.href = url;
   }
-  if (url !== URL) {
+  if (key !== URL) {
     window.location.href = '/'
   } 
   

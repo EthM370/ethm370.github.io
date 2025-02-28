@@ -9,7 +9,7 @@ export const RouterR: React.FC = () => {
     <Routers>
       <Routes>
         <Route path="/" element={<Blank />}/>
-        <Route path="/:passkey" element={<Home />}/>
+        <Route path="/:key" element={<Home />}/>
       </Routes>
     </Routers>
   );
