@@ -9,12 +9,13 @@ import { useParams } from 'react-router-dom';
 
 
 const Home: React.FC = () => {
-  const PASSKEY = process.env.REACT_APP_PASSKEY;
-  const { passkey } = useParams<{passkey: string}>();
+  const URL = process.env.REACT_APP_URL;
+
+  const { url } = useParams<{url: string}>();
   const handleButtonRedirect = (url : string) => {
     window.location.href = url;
   }
-  if (passkey !== PASSKEY) {
+  if (url !== URL) {
     window.location.href = '/'
   } 
   
