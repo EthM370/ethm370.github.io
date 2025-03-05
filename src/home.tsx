@@ -7,9 +7,6 @@ import logo from './assets/MyGitHubProfile.png';
 import { useParams } from 'react-router-dom';
 import { generate } from './api';
 import { useState } from 'react';
-import { useForm } from '@mantine/form';
-import { notifications } from '@mantine/notifications';
-
 
 
 const Home: React.FC = () => {
@@ -57,14 +54,19 @@ const Home: React.FC = () => {
                     <Title order={1}>Hi, I'm Ethan</Title> 
                     <Text> I'm currently pursuing a Computer Science BS at UIUC</Text>
                     <Text> I like skiing, video games, and F1</Text>
-                    <Text> Contact me at... </Text>
-                    <Text> Email: Redacted Chatbot Incoming</Text>
+                    <Text> </Text>
                     <Text> </Text>
                   </Stack>
                 </Container>
               </Center>   
             </Group>
-            <Container w="550px" mt="20px" flex="auto" style={{ padding:'20px', borderRadius:"10px", backgroundColor: '#C0C0C0'}}>
+            <Container w="550px" mt="20px" flex="auto" 
+              style={{ 
+                padding:'20px', 
+                borderRadius:"10px", 
+                borderColor:'#C0C0C0', 
+                borderWidth: "2px", 
+                borderStyle:"solid"}}>
               <Stack>
                 <Text>
                   Gemini says :: {response} 
