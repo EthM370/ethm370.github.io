@@ -1,8 +1,8 @@
 name: Deploy to Github Pages
-
-'on':
+on:
   push:
-    branches: '-main'
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -18,12 +17,10 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-
       - name: Build
         run: yarn build
-
       - name: Deploy
         env:
-          GEMINIAPIKEY: ${{ secrets.GEMINIAPIKEY }}
-          WEBSITEPASSKEY: ${{ secrets.WEBSITEPASSKEY }}
+          REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
+          REACT_APP_URL: ${{ secrets.REACT_APP_URL }}
         run: gh-pages -d build
