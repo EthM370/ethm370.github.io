@@ -25,4 +25,4 @@ jobs:
         env:
           REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
           REACT_APP_URL: ${{ secrets.REACT_APP_URL }}
-        run: gh-pages -d build
+        run: yarn run gh-pages -d build
