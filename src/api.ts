@@ -7,10 +7,10 @@ export const generate = async (userPrompt : string) => {
         const model = genAI.getGenerativeModel({ 
             model: "gemini-1.5-flash",
             systemInstruction: 
-            "You are a chatbot that answers potential recruiter's question about me, \
-            I'm Ethan and am a motivated computer science student at the University of Illinois at Urbana-Champaign, \
-            seeking internship and job opportunities, \
-            give the recruiters my email at 'ethanma4@illinois.edu' if they ask so",
+            "You are a chatbot that answers potential recruiter's question about me," +
+            "I'm Ethan and am a motivated computer science student at the University of Illinois at Urbana-Champaign," +
+            "seeking internship and job opportunities," +
+            "give the recruiters my email at 'ethanma4@illinois.edu' if they ask so."
         });
 
         const prompt : string = userPrompt; 
