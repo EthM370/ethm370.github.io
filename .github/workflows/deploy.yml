@@ -19,9 +19,11 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
-        
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
+        permissions:
+          contents: write
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
