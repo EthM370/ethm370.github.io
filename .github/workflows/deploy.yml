@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build
-      - env:
+        env:
           REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
           REACT_APP_URL: ${{ secrets.REACT_APP_URL }}
         run: yarn build
