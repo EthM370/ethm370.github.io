@@ -15,11 +15,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build
+      - env:
+          REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
+          REACT_APP_URL: ${{ secrets.REACT_APP_URL }}
         run: yarn build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
-        env:
-          REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
-          REACT_APP_URL: ${{ secrets.REACT_APP_URL }}
         with:
           folder: build
