@@ -1,11 +1,9 @@
-name: Deploy to Github Pages
-on:
-  push:
-    branches:
-      - main
-
+name: Build and Deploy to Github Pages
+on: [push]
+permissions:
+  contents: write
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
