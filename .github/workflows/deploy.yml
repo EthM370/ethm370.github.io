@@ -19,11 +19,12 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
-      - name: Install gh-pages
-        run: yarn add gh-pages
-      - name: Deploy
+        
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REACT_APP_APIKEY: ${{ secrets.REACT_APP_APIKEY }}
           REACT_APP_URL: ${{ secrets.REACT_APP_URL }}
-        run: yarn run gh-pages -d build
+        with:
+          folder: build
