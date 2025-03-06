@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.76e61aa1.css",
-    "main.js": "/static/js/main.ae983311.js",
+    "main.js": "/static/js/main.d0f79b7e.js",
     "static/js/453.70888deb.chunk.js": "/static/js/453.70888deb.chunk.js",
     "static/media/Lumatic_HeadshotEdit.png": "/static/media/Lumatic_HeadshotEdit.b07261ad7bb09a8dac63.png",
     "index.html": "/index.html",
     "main.76e61aa1.css.map": "/static/css/main.76e61aa1.css.map",
-    "main.ae983311.js.map": "/static/js/main.ae983311.js.map",
+    "main.d0f79b7e.js.map": "/static/js/main.d0f79b7e.js.map",
     "453.70888deb.chunk.js.map": "/static/js/453.70888deb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76e61aa1.css",
-    "static/js/main.ae983311.js"
+    "static/js/main.d0f79b7e.js"
   ]
 }
